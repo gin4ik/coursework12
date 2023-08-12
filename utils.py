@@ -18,7 +18,7 @@ def load_random_word() -> BasicWord:
 
 
 def validate_user_word(user_word: str, basic_word: BasicWord, player: Player) -> str:
-    if user_word in ('stop'):
+    if user_word in 'stop':
         return ''
     if len(user_word) < 3:
         return 'слишком короткое слово'
@@ -28,4 +28,3 @@ def validate_user_word(user_word: str, basic_word: BasicWord, player: Player) ->
         return 'уже использовано'
     player.add_word_in_used_words(user_word)
     return 'верно'
-
